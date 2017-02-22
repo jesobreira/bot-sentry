@@ -1,0 +1,54 @@
+         NEW AND IMPROVED WIN32 (tested on Debian/GNU Linux)
+
+Getting a build environment:
+
+   Use the wingaim build fetcher from http://gaim-extprefs.sf.net to
+   download a wingaim build environment and the pidgin source code:
+
+   wget http://gaim-extprefs.sf.net/wingaim-build-fetcher.sh
+   bash wingaim-build-fetcher.sh
+
+   Don't worry about "WARNING: Installations cannot proceed: This is not
+   Win32" and similar messages.  You don't need to build any installer
+   packages to get a mingw purple development environment for bot-sentry.
+
+   After this, you need to configure, build, and copy the libraries,
+   headers, and pkg-config files.  The script mingw-purple-dev.sh is
+   provided for convenience (all parameters are required):
+
+   ./mingw-purple-dev.sh [pidgin src dir] [mingw gtk dir] [mingw compiler] [mingw windres]
+
+   After this script runs, it will print the name of the directory you
+   can use to configure bot-sentry.
+
+   To build bot-sentry for windows you need to install at least version
+   2.14 of nsis (http://nsis.sf.net), which is used to build the windows
+   installer package (required for a wingaim installation).  If the
+   wingaim build fetcher didn't install this for you, you must install
+   it for yourself (this would be the case if you are building from
+   Linux using a cross compiler).
+
+Running configure:
+
+   You should configure as you would any package.  However, if you are
+   building for Windows from Linux using a cross compiler, it stands to
+   reason that you need to provide some extra information, indicating
+   where to find various headers/libraries, the canonical build value
+   and the canonical host value.  Here is what I do:
+
+   WINPURPLE_DEV="/some/path/provided/by/mingw-purple-dev.sh"
+
+   ./configure \
+	--build=i686-pc-linux-gnu \
+	--host=i586-mingw32msvc \
+	PKG_CONFIG_PATH="$WINPURPLE_DEV/lib/pkgconfig" \
+	CPPFLAGS="-I$WINPURPLE_DEV/include"
+
+Running make:
+
+   make
+
+Building the windows installer
+
+   make installer
+

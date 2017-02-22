@@ -1,0 +1,47 @@
+;; vim:fileencoding=latin1:fileformat=dos
+;;
+;; Language: Arabic (1025)
+;;
+;; Default language strings for bot-sentry nsis installer.
+;; Copyright (C) 2006 David Everly <deckrider@users.sourceforge.net>
+;; This file is distributed under the same license as the bot-sentry package.
+;; David Everly <deckrider@users.sourceforge.net>, 2006.
+;; Translator Nowar Al-Naffouri, naffouri@cmu.edu
+;;
+
+!insertmacro LANGFILE "Arabic" "Arabic"
+
+;; MUI Wizard Text
+;; Install
+
+
+${LangFileString} BS_PAGE_WELCOME_TEXT "Â–« «·»—‰«„Ã «·„”«⁄œ ”Ì—‘œﬂ ›Ì  À»Ì  $(^NameDA).$\r$\n$\r$\nÌ” Õ”‰ √‰  €·ﬁ ﬂ· «· ÿ»Ìﬁ«  ﬁ»· «·«” „—«—$\r$\n$\r$\n$_CLICK"
+
+
+${LangFileString} BS_PAGE_DIRECTORY_HEADER_TEXT "«” ⁄—÷ „Êﬁ⁄ «· À»Ì "
+
+${LangFileString} BS_PAGE_DIRECTORY_HEADER_SUBTEXT "«” ⁄—÷ œ·Ì·  À»Ì  «·»—‰«„Ã $(^NameDA)."
+
+${LangFileString} BS_PAGE_DIRECTORY_TEXT_TOP "”Ì „  À»Ì  »—‰«„Ã $(^NameDA) ›Ì «·œ·Ì· «· «·Ì $_CLICK"
+
+
+;; MUI Wizard Text
+;; Uninstall
+
+
+${LangFileString} BS_UNPAGE_WELCOME_TEXT " Â–« «·»—‰«„Ã «·„”«⁄œ ”Ì—‘œﬂ ›Ì ≈“«·… »—‰«„Ã$(^NameDA).$\r$\n$\r$\n” Õ”‰ √‰  €·ﬁ ﬂ· «· ÿ»Ìﬁ«  ﬁ»· «·«” „—«—.$\r$\n$\r$\n$_CLICK"
+
+
+;; MessageBox Error Text
+
+
+${LangFileString} BS_PIDGIN_IS_RUNNING " .√Ê »—‰«„Ã ¬Œ— €Ì— „ Ê«›ﬁ „⁄ »—‰«„Ã «· À»Ì  Ì⁄„· «·¬‰. «·—Ã«¡ ≈€·«ﬁ Ã„Ì⁄ «·»—«„Ã €Ì— «·„ Ê«›ﬁ… ﬁ»· « „«„ «· À»Ì  Pidgin  "
+
+${LangFileString} BS_NO_PERMISSION "·« ÌÊÃœ ·œÌﬂ ’·«ÕÌ… · À»Ì   √Ê ≈“«·… $(^NameDA) ⁄·Ï Â–« «·ÃÂ«“"
+
+${LangFileString} BS_NO_PURPLE_VERSION ".⁄·Ï Â–« «·ÃÂ«“ «·–Ì ·œÌﬂ «·’·«ÕÌ… · ÕœÌÀÂ Pidgin ·„ Ì „ ≈ÌÃ«œ «·‰”Œ… «·„À» … „‰"
+
+${LangFileString} BS_INCOMPATIBLE_PURPLE_VERSION "$(^NameDA) Pidgin €Ì— „ Ê«›ﬁ „⁄ «·‰”Œ… «·„À» … Õ«·Ì« „‰"
+
+${LangFileString} BS_UNINSTALL_DESC "$(^NameDA) (Õ–› ›ﬁÿ)"
+

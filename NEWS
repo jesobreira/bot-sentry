@@ -1,0 +1,16 @@
+1.1.0
+
+	*  since pidgin/libpurple looks for plugins in a variety of
+	   directories, be sure to use './configure --libdir=DIR'
+	   to specify the directory where you want to install this
+	   plugin
+	*  you can now choose whether to use Bot Sentry with
+	   individual accounts (see the advanced tab of Add/Modify
+	   Account)
+
+1.0.0
+
+	*  Gaim is no longer supported, purple >= 2.0.0 is required
+	*  automatically change any conflicting settings found in
+	   the Psychic plugin
+

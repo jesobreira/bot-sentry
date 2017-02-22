@@ -1,0 +1,191 @@
+# Arabic translations for bot-sentry package.
+# Copyright (C) 2006 David Everly <deckrider@users.sourceforge.net>
+# This file is distributed under the same license as the bot-sentry package.
+# Nowar Al-Naffouri <naffouri@cmu.edu>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bot-sentry 0.10.0+svn\n"
+"Report-Msgid-Bugs-To: http://pidgin-bs.sourceforge.net/\n"
+"POT-Creation-Date: 2008-07-11 07:09-0600\n"
+"PO-Revision-Date: 2006-02-28 19:40-0700\n"
+"Last-Translator: Nowar Al-Naffouri<naffouri@cmu.edu>\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/bot-sentry.c:195
+#, c-format
+msgid "Pending:  protocol = %s, username = %s, sender = %s, message = %s\n"
+msgstr ""
+"%s = الرسالة %s = المرسل %s = اسم المستخدم %s = قيد الانتظار: البروتوكول\n"
+
+#: ../src/bot-sentry.c:232
+msgid "Preference Change"
+msgstr ""
+
+#: ../src/bot-sentry.c:232
+msgid ""
+"Your preferences have been changed to only enable Psychic Mode for users on "
+"your buddy list."
+msgstr ""
+
+#: ../src/bot-sentry.c:232
+msgid "This setting is required while the Bot Sentry plugin is enabled."
+msgstr ""
+
+#: ../src/bot-sentry.c:291
+#, c-format
+msgid "GRANT account authorization to %s in open conversation using %s\n"
+msgstr ""
+
+#: ../src/bot-sentry.c:303
+#, c-format
+msgid "GRANT account authorization to %s on buddy list using %s\n"
+msgstr ""
+
+#: ../src/bot-sentry.c:316
+#, c-format
+msgid "GRANT account authorization to %s on permit list using %s\n"
+msgstr ""
+
+#: ../src/bot-sentry.c:327
+#, c-format
+msgid "DENY account authorization to %s on deny list using %s\n"
+msgstr ""
+
+#: ../src/bot-sentry.c:336
+#, c-format
+msgid "DENY account authorization to %s using %s\n"
+msgstr ""
+
+#: ../src/bot-sentry.c:339
+#, c-format
+msgid "GRANT account authorization to %s using %s\n"
+msgstr ""
+
+#: ../src/bot-sentry.c:466
+#, c-format
+msgid ""
+"Bot Sentry engaged:  you are now being ignored!  Your message will be "
+"delivered if you can correctly answer the following question within %i "
+"minutes:  %s"
+msgstr ""
+"%s  :دقيقة %i فعال الآن::لقد تم تجاهلك!سيتم إيصال رسالتك إذا تمكنت من إجابة "
+"السؤال التالي خلال Bot Sentry"
+
+#: ../src/bot-sentry.c:482
+msgid ""
+"Bot Sentry accepted your answer and delivered your original message.  You "
+"may now speak freely."
+msgstr ""
+"قبل إجابتك  وسوف  يوصل رسالتك الأصلية. يمكنك الآن التحدث كما تشاء Bot Sentry"
+
+#: ../src/bot-sentry.c:487
+#, c-format
+msgid "Unable to add %s/%s/%s to permit list\n"
+msgstr "إلى قائمة السماح %s/%s/%s لايمكن إضافة\n"
+
+#: ../src/bot-sentry.c:492 ../src/bot-sentry.c:713
+msgid "Bot Sentry"
+msgstr "Bot Sentry"
+
+#: ../src/bot-sentry.c:497
+#, fuzzy, c-format
+msgid "Unable to add %s/%s/%s to buddy list\n"
+msgstr "إلى قائمة السماح %s/%s/%s لايمكن إضافة\n"
+
+#: ../src/bot-sentry.c:532
+#, fuzzy
+msgid "Define the challenge (blank to disable):"
+msgstr "عرف االاختبار"
+
+#: ../src/bot-sentry.c:535
+msgid "Question"
+msgstr "سؤال"
+
+#: ../src/bot-sentry.c:538
+msgid "Answer"
+msgstr "إجابة"
+
+#: ../src/bot-sentry.c:541
+#, fuzzy
+msgid "When the challenge is met, let this person IM me and:"
+msgstr "و IM عند ما ينجح الشخص في الاختبار دعه يتحدث معك بواسطة اال:"
+
+#: ../src/bot-sentry.c:544
+#, fuzzy
+msgid "Add this person to my Allow List"
+msgstr "أضف هذا الشخص إلى قائمة السماح"
+
+#: ../src/bot-sentry.c:547
+#, fuzzy
+msgid "Add this person to my Buddy List"
+msgstr "أضف هذا الشخص إلى قائمة السماح"
+
+#: ../src/bot-sentry.c:551
+msgid "When a buddy authorization request is received:"
+msgstr ""
+
+#: ../src/bot-sentry.c:554
+msgid "Policy"
+msgstr ""
+
+#: ../src/bot-sentry.c:556
+msgid "deny the request"
+msgstr ""
+
+#: ../src/bot-sentry.c:557
+msgid "ask me what to do"
+msgstr ""
+
+#: ../src/bot-sentry.c:558
+msgid "grant the request"
+msgstr ""
+
+#: ../src/bot-sentry.c:582
+msgid "How do you spell the number 10?"
+msgstr "كيف تكتب الرقم 10؟"
+
+#: ../src/bot-sentry.c:583
+msgid "ten"
+msgstr "عشرة"
+
+#: ../src/bot-sentry.c:606
+msgid "Use Bot Sentry with this account"
+msgstr ""
+
+#: ../src/bot-sentry.c:714
+msgid "Block robots from sending Instant Messages"
+msgstr "امنع الأنظمة الآلية من ارسال رسائل عبر المسنجر"
+
+#: ../src/bot-sentry.c:716
+msgid ""
+"A simple challenge-response system to prevent spam-bots from sending you "
+"instant messages.  Think of it as a pop-up blocker.  You define a question "
+"and an answer.  Instant messages from others will be ignored unless one of "
+"the following is true:\n"
+"\n"
+"\t* the sender is in your Buddy List\n"
+"\t* the sender is in your Allow List\n"
+"\t* the sender correctly answers your question\n"
+"\n"
+"Optionally, you may have the sender automatically added to your Allow List "
+"when the correct answer is provided.\n"
+"\n"
+"Encryption plugin users:  Bot Sentry will send plain text messages to the "
+"sender until the sender correctly answers your question."
+msgstr ""
+"هذا نظام اختبار - إجابة بسيط لمنع متسللين من إرسال رسائل فورية عبر المسنجر. "
+"سوف تحدد سؤالا و إجابة. الرسائل الفورية التي يرسلها الآخرون سوف يتم تجاهلها "
+"ما لم تتحقق الشروط التالية:\n"
+"\n"
+"\t* االمرسل ضمن قائمة أصقائك\n"
+"\t* االمرسل ضمن قائمة أالسماح\n"
+"\t* االمرسل أجاب اسئلتك بشكل صحيح\n"
+"\n"
+"يمكنك أن تضيف المرسل بشكل تلقائي إلى قائمة السماح إذا أرسل الإجابة الصحيحة.\n"
+"\n"
+"ﻢﺴﺘﺧﺪﻤﻳ ﻦﻇﺎﻣ ﺎﻠﺘﺸﻔﻳﺭ: Bot Sentry سوف يقوم بإرسال رسائل نصية متواصلة إلى "
+"المرسل إلى أن يقوم المرسل بإجابة أسئلتكم بشكل صحيح."

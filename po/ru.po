@@ -1,0 +1,204 @@
+# Russian translations for bot-sentry package
+# Русский перевод для bot-sentry.
+# Copyright (C) 2006 David Everly <deckrider@users.sourceforge.net>
+# This file is distributed under the same license as the bot-sentry package.
+# Victor Makagonov <vicmailbox@yandex.ru>, 2008. 
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bot-sentry 1.0.0\n"
+"Report-Msgid-Bugs-To: http://pidgin-bs.sourceforge.net/\n"
+"POT-Creation-Date: 2008-07-11 07:09-0600\n"
+"PO-Revision-Date: 2007-11-24 19:45-0600\n"
+"Last-Translator: Yury A. Romanov <damned@altlinux.ru>\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../src/bot-sentry.c:195
+#, c-format
+msgid "Pending:  protocol = %s, username = %s, sender = %s, message = %s\n"
+msgstr ""
+"Добавлен в очередь ожидания: протокол = %s, имя пользователя = %s, "
+"отправитель = %s, сообщение = %s\n"
+
+#: ../src/bot-sentry.c:232
+msgid "Preference Change"
+msgstr "Настройки"
+
+#: ../src/bot-sentry.c:232
+msgid ""
+"Your preferences have been changed to only enable Psychic Mode for users on "
+"your buddy list."
+msgstr ""
+"Ваши настройки были изменены для того, чтобы включить Psychic Mode для "
+"Вашего списка контактов"
+
+#: ../src/bot-sentry.c:232
+msgid "This setting is required while the Bot Sentry plugin is enabled."
+msgstr "Эта настройка необходима для работы плагина Bot Sentry. "
+
+#: ../src/bot-sentry.c:291
+#, c-format
+msgid "GRANT account authorization to %s in open conversation using %s\n"
+msgstr ""
+
+#: ../src/bot-sentry.c:303
+#, c-format
+msgid "GRANT account authorization to %s on buddy list using %s\n"
+msgstr ""
+
+#: ../src/bot-sentry.c:316
+#, c-format
+msgid "GRANT account authorization to %s on permit list using %s\n"
+msgstr ""
+
+#: ../src/bot-sentry.c:327
+#, c-format
+msgid "DENY account authorization to %s on deny list using %s\n"
+msgstr ""
+
+#: ../src/bot-sentry.c:336
+#, c-format
+msgid "DENY account authorization to %s using %s\n"
+msgstr ""
+
+#: ../src/bot-sentry.c:339
+#, c-format
+msgid "GRANT account authorization to %s using %s\n"
+msgstr ""
+
+#: ../src/bot-sentry.c:466
+#, c-format
+msgid ""
+"Bot Sentry engaged:  you are now being ignored!  Your message will be "
+"delivered if you can correctly answer the following question within %i "
+"minutes:  %s"
+msgstr ""
+"Bot Sentry: В данный момент вас игнорируют! ваше сообщение будет доставлено, "
+"если вы в течение %i минут верно ответите на вопрос: %s "
+
+#: ../src/bot-sentry.c:482
+msgid ""
+"Bot Sentry accepted your answer and delivered your original message.  You "
+"may now speak freely."
+msgstr ""
+"Bot Sentry принял ваш ответ и доставил ваше первое сообщение теперь вы "
+"можете общаться спокойно. "
+
+#: ../src/bot-sentry.c:487
+#, c-format
+msgid "Unable to add %s/%s/%s to permit list\n"
+msgstr "Невозможно добавить %s/%s/%s в список разрешенных\n"
+
+#: ../src/bot-sentry.c:492 ../src/bot-sentry.c:713
+msgid "Bot Sentry"
+msgstr "Bot Sentry "
+
+#: ../src/bot-sentry.c:497
+#, fuzzy, c-format
+msgid "Unable to add %s/%s/%s to buddy list\n"
+msgstr "Невозможно добавить %s/%s/%s в список разрешенных\n"
+
+#: ../src/bot-sentry.c:532
+#, fuzzy
+msgid "Define the challenge (blank to disable):"
+msgstr "Введите вопрос: "
+
+#: ../src/bot-sentry.c:535
+msgid "Question"
+msgstr "Вопрос "
+
+#: ../src/bot-sentry.c:538
+msgid "Answer"
+msgstr "Ответ "
+
+#: ../src/bot-sentry.c:541
+#, fuzzy
+msgid "When the challenge is met, let this person IM me and:"
+msgstr "Если пользователь верно ответил на вопрос, разрешить ему писать вам и:"
+
+#: ../src/bot-sentry.c:544
+#, fuzzy
+msgid "Add this person to my Allow List"
+msgstr "Добавить пользователя в ваш Allow List "
+
+#: ../src/bot-sentry.c:547
+#, fuzzy
+msgid "Add this person to my Buddy List"
+msgstr "Добавить пользователя в ваш Allow List "
+
+#: ../src/bot-sentry.c:551
+msgid "When a buddy authorization request is received:"
+msgstr ""
+
+#: ../src/bot-sentry.c:554
+msgid "Policy"
+msgstr ""
+
+#: ../src/bot-sentry.c:556
+msgid "deny the request"
+msgstr ""
+
+#: ../src/bot-sentry.c:557
+msgid "ask me what to do"
+msgstr ""
+
+#: ../src/bot-sentry.c:558
+msgid "grant the request"
+msgstr ""
+
+#: ../src/bot-sentry.c:582
+msgid "How do you spell the number 10?"
+msgstr "Напишите прописью число 10. "
+
+#: ../src/bot-sentry.c:583
+msgid "ten"
+msgstr "десять"
+
+#: ../src/bot-sentry.c:606
+msgid "Use Bot Sentry with this account"
+msgstr "Включить Bot Sentry для этого аккаунта "
+
+#: ../src/bot-sentry.c:714
+msgid "Block robots from sending Instant Messages"
+msgstr "Блокировать сообщения, отсылаемые ботами "
+
+#: ../src/bot-sentry.c:716
+msgid ""
+"A simple challenge-response system to prevent spam-bots from sending you "
+"instant messages.  Think of it as a pop-up blocker.  You define a question "
+"and an answer.  Instant messages from others will be ignored unless one of "
+"the following is true:\n"
+"\n"
+"\t* the sender is in your Buddy List\n"
+"\t* the sender is in your Allow List\n"
+"\t* the sender correctly answers your question\n"
+"\n"
+"Optionally, you may have the sender automatically added to your Allow List "
+"when the correct answer is provided.\n"
+"\n"
+"Encryption plugin users:  Bot Sentry will send plain text messages to the "
+"sender until the sender correctly answers your question."
+msgstr ""
+"Простая система вопрос-ответ, предохраняющая от сообщений, рассылаемых спам-"
+"ботами. Относитесь к ней, как к простому блокировщику всплывающих окон. Вы "
+"указываете вопрос и ответ на него. Мгновенные сообщения от других контактов "
+"будут игнорироваться до тех пор, пока не выполнится одно из условий:\n"
+"\n"
+"\t* Отправитель находится в вашем списке контактов\n"
+"\t* Отправитель находится в списке разрешенных\n"
+"\t* Отправитель правильно отвечает на ваш вопрос\n"
+"\n"
+"Также, можно автоматически добавлять пользователя в список разрешенных, если "
+"был дан верный ответ на вопрос.\n"
+"\n"
+"К сведению пользователей плагинов шифрования: Bot Sentry отправляет "
+"текстовые сообщения открытым текстом, до тех пор, пока пользователь не "
+"ответит верно на вопрос Также, эта версия может блокировать запросы "
+"авторизации, если клиент поддерживает это."
+
+#~ msgid "Block GUI splashes on authorization requests."
+#~ msgstr "Блокировать всплывающие окна запросов авторизации."

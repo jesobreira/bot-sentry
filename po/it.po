@@ -1,0 +1,200 @@
+# Italian translations for bot-sentry package
+# Traduzioni italiane per il pacchetto pidgin-bs..
+# Copyright (C) 2006 David Everly <deckrider@users.sourceforge.net>
+# This file is distributed under the same license as the bot-sentry package.
+# Meo Bogliolo <meo@bogliolo.name>, 2006-2007.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bot-sentry 1.0.0\n"
+"Report-Msgid-Bugs-To: http://pidgin-bs.sourceforge.net/\n"
+"POT-Creation-Date: 2008-07-11 07:09-0600\n"
+"PO-Revision-Date: 2007-06-11 05:57-0600\n"
+"Last-Translator: Meo Bogliolo <meo@bogliolo.name>\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../src/bot-sentry.c:195
+#, c-format
+msgid "Pending:  protocol = %s, username = %s, sender = %s, message = %s\n"
+msgstr ""
+"In attesa: protocollo = %s, utente = %s, mittente =%s, messaggio = %s\n"
+
+#: ../src/bot-sentry.c:232
+msgid "Preference Change"
+msgstr "Cambio delle preferenze"
+
+#: ../src/bot-sentry.c:232
+msgid ""
+"Your preferences have been changed to only enable Psychic Mode for users on "
+"your buddy list."
+msgstr ""
+"Le preferenze sono state cambiate per abilitare solo il modo fisico per gli "
+"utenti nella buddy list."
+
+#: ../src/bot-sentry.c:232
+msgid "This setting is required while the Bot Sentry plugin is enabled."
+msgstr ""
+"Questa impostazione e' necessaria quando il plugin Bot Sentry e' abilitato."
+
+#: ../src/bot-sentry.c:291
+#, c-format
+msgid "GRANT account authorization to %s in open conversation using %s\n"
+msgstr ""
+
+#: ../src/bot-sentry.c:303
+#, c-format
+msgid "GRANT account authorization to %s on buddy list using %s\n"
+msgstr ""
+
+#: ../src/bot-sentry.c:316
+#, c-format
+msgid "GRANT account authorization to %s on permit list using %s\n"
+msgstr ""
+
+#: ../src/bot-sentry.c:327
+#, c-format
+msgid "DENY account authorization to %s on deny list using %s\n"
+msgstr ""
+
+#: ../src/bot-sentry.c:336
+#, c-format
+msgid "DENY account authorization to %s using %s\n"
+msgstr ""
+
+#: ../src/bot-sentry.c:339
+#, c-format
+msgid "GRANT account authorization to %s using %s\n"
+msgstr ""
+
+#: ../src/bot-sentry.c:466
+#, c-format
+msgid ""
+"Bot Sentry engaged:  you are now being ignored!  Your message will be "
+"delivered if you can correctly answer the following question within %i "
+"minutes:  %s"
+msgstr ""
+"Bot Sentry attivato: in questo momento sei ignorato! Il messaggio sara' "
+"inviato se risponderai correttamente alla seguente domand in %i minuti: %s"
+
+#: ../src/bot-sentry.c:482
+msgid ""
+"Bot Sentry accepted your answer and delivered your original message.  You "
+"may now speak freely."
+msgstr ""
+"Bot Sentry ha accettato la tua risposta e consegnato il messaggio originale. "
+"Ora puoi parlare liberamente."
+
+#: ../src/bot-sentry.c:487
+#, c-format
+msgid "Unable to add %s/%s/%s to permit list\n"
+msgstr "Impossibile aggiungere %s/%s/%s alla lista dei permessi\n"
+
+#: ../src/bot-sentry.c:492 ../src/bot-sentry.c:713
+msgid "Bot Sentry"
+msgstr "Bot Sentry"
+
+#: ../src/bot-sentry.c:497
+#, fuzzy, c-format
+msgid "Unable to add %s/%s/%s to buddy list\n"
+msgstr "Impossibile aggiungere %s/%s/%s alla lista dei permessi\n"
+
+#: ../src/bot-sentry.c:532
+#, fuzzy
+msgid "Define the challenge (blank to disable):"
+msgstr "Definire il confronto:"
+
+#: ../src/bot-sentry.c:535
+msgid "Question"
+msgstr "Domanda"
+
+#: ../src/bot-sentry.c:538
+msgid "Answer"
+msgstr "Risposta"
+
+#: ../src/bot-sentry.c:541
+#, fuzzy
+msgid "When the challenge is met, let this person IM me and:"
+msgstr "Quando il confronto e' corretto, consenti alla persona IM te e:"
+
+#: ../src/bot-sentry.c:544
+#, fuzzy
+msgid "Add this person to my Allow List"
+msgstr "Aggiungi questa persona alla tua lista Allow"
+
+#: ../src/bot-sentry.c:547
+#, fuzzy
+msgid "Add this person to my Buddy List"
+msgstr "Aggiungi questa persona alla tua lista Allow"
+
+#: ../src/bot-sentry.c:551
+msgid "When a buddy authorization request is received:"
+msgstr ""
+
+#: ../src/bot-sentry.c:554
+msgid "Policy"
+msgstr ""
+
+#: ../src/bot-sentry.c:556
+msgid "deny the request"
+msgstr ""
+
+#: ../src/bot-sentry.c:557
+msgid "ask me what to do"
+msgstr ""
+
+#: ../src/bot-sentry.c:558
+msgid "grant the request"
+msgstr ""
+
+#: ../src/bot-sentry.c:582
+msgid "How do you spell the number 10?"
+msgstr "Com'e' 10 in lettere?"
+
+#: ../src/bot-sentry.c:583
+msgid "ten"
+msgstr "dieci"
+
+#: ../src/bot-sentry.c:606
+msgid "Use Bot Sentry with this account"
+msgstr "Utilizza Bot Sentry con questo account"
+
+#: ../src/bot-sentry.c:714
+msgid "Block robots from sending Instant Messages"
+msgstr "Blocca i messaggi inviati dai robot"
+
+#: ../src/bot-sentry.c:716
+msgid ""
+"A simple challenge-response system to prevent spam-bots from sending you "
+"instant messages.  Think of it as a pop-up blocker.  You define a question "
+"and an answer.  Instant messages from others will be ignored unless one of "
+"the following is true:\n"
+"\n"
+"\t* the sender is in your Buddy List\n"
+"\t* the sender is in your Allow List\n"
+"\t* the sender correctly answers your question\n"
+"\n"
+"Optionally, you may have the sender automatically added to your Allow List "
+"when the correct answer is provided.\n"
+"\n"
+"Encryption plugin users:  Bot Sentry will send plain text messages to the "
+"sender until the sender correctly answers your question."
+msgstr ""
+"Un semplice sistema a domanda-risposta per evitare lo spam di messaggi. Pou' "
+"essere paragonato ad un blocco dei pop-up. Basta definire una domanda ed una "
+"risposta. I messaggi immediati vengono ignorati a meno che sia vera una "
+"delle seguenti condizioni:\n"
+"\n"
+"\t* il mittente e' nella Buddy List\n"
+"\t* il mittente e' nella Allow List\n"
+"\t* il mittente risponde correttamente alla domanda\n"
+"\n"
+"E' possibile inserire, opzionalmente, il mittente nella Allow List se viene "
+"data la risposta corretta.\n"
+"\n"
+"Per gli utenti con il plug-in di Encription:  Bot Sentry inviera' messaggi "
+"con testo in chiaro al mittente fino a che il mittente non avra' inviato la "
+"risposta corretta."

@@ -1,0 +1,1058 @@
+2008-07-11  deckrider
+
+	* /bot-sentry/tags/release-1.3.0,
+	  /bot-sentry/tags/release-1.3.0/configure.ac:
+	  release 1.3.0
+
+	* /bot-sentry/trunk/po/ar.po, /bot-sentry/trunk/po/cs.po,
+	  /bot-sentry/trunk/po/de.po, /bot-sentry/trunk/po/es.po,
+	  /bot-sentry/trunk/po/it.po, /bot-sentry/trunk/po/no.po,
+	  /bot-sentry/trunk/po/ru.po:
+	  update-po
+
+	* /bot-sentry/trunk/src/bot-sentry.c:
+	  Change from 'Always' to 'Policy' since there is now some smart
+	  handling of auth requests.
+
+2008-07-10  deckrider
+
+	* /bot-sentry/trunk/po/ar.po, /bot-sentry/trunk/po/cs.po,
+	  /bot-sentry/trunk/po/de.po, /bot-sentry/trunk/po/es.po,
+	  /bot-sentry/trunk/po/it.po, /bot-sentry/trunk/po/no.po,
+	  /bot-sentry/trunk/po/ru.po:
+	  update-po for latest strings
+
+	* /bot-sentry/trunk/src/bot-sentry.c:
+	  New option to add sender to buddy list when the question is
+	  answered correctly.
+
+	* /bot-sentry/trunk/src/bot-sentry.c:
+	  Authorization requests: remove duplicate logic and ensure that
+	  checks for open conversations, buddy lists, and permit lists
+	  trump the deny list.
+
+2008-07-09  deckrider
+
+	* /bot-sentry/trunk/src/bot-sentry.c:
+	  Add logging of automatic authorization actions, ensure that
+	  PROMPT disables authorization processing.
+
+	* /bot-sentry/trunk/src/bot-sentry.c:
+	  Don't auto-permit or prompt for authorization if the requesting
+	  person is in the deny list.
+
+2008-07-08  deckrider
+
+	* /bot-sentry/trunk/src/bot-sentry.c:
+	  Don't prompt for authorization when it is likely the user wants
+	  to grant it.
+
+	* /bot-sentry/trunk/src/bot-sentry.c:
+	  Don't prompt for authorization when it is likely the user wants
+	  to grant it.
+
+	* /bot-sentry/trunk/src/bot-sentry.c:
+	  Don't use bot-sentry auth functionality with open conversations,
+	  buddies, or permit list members.
+
+	* /bot-sentry/trunk/README.svn, /bot-sentry/trunk/src/bot-sentry.c:
+	  Use the same callback signature as in the examples. Source code
+	  formatting changes.
+
+2008-07-04  deckrider
+
+	* /bot-sentry/trunk/autogen.sh, /bot-sentry/trunk/configure.ac:
+	  resume development and let svn2cl see all the changed files,
+	  regardless of path or history
+
+	* /bot-sentry/trunk/configure.ac:
+	  release 1.2.1
+
+	* /bot-sentry/trunk/src/bot-sentry.c:
+	  fix mistake from cutting and pasting
+
+	* /bot-sentry/trunk/configure.ac:
+	  release 1.2.0
+
+	* /bot-sentry/trunk/po/ar.po, /bot-sentry/trunk/po/cs.po,
+	  /bot-sentry/trunk/po/de.po, /bot-sentry/trunk/po/es.po,
+	  /bot-sentry/trunk/po/it.po, /bot-sentry/trunk/po/no.po,
+	  /bot-sentry/trunk/po/ru.po:
+	  update-po
+
+	* /bot-sentry/trunk/README.svn:
+	  Leaving the question and answer blank should disable challenging
+	  while leaving some other checks in place. Update documentation.
+
+	* /bot-sentry/trunk/src/bot-sentry.c:
+	  Leaving the question and answer blank should disable challenging
+	  while leaving some other checks in place.
+
+2008-07-02  deckrider
+
+	* /bot-sentry/trunk/nsis/Arabic.nsh,
+	  /bot-sentry/trunk/nsis/Czech.nsh,
+	  /bot-sentry/trunk/nsis/English.nsh,
+	  /bot-sentry/trunk/nsis/German.nsh,
+	  /bot-sentry/trunk/nsis/Italian.nsh,
+	  /bot-sentry/trunk/nsis/Norwegian.nsh,
+	  /bot-sentry/trunk/nsis/Russian.nsh,
+	  /bot-sentry/trunk/nsis/Spanish.nsh,
+	  /bot-sentry/trunk/nsis/installer.nsi:
+	  update to nsis MUI2 installer
+
+	* /bot-sentry/trunk/nsis/installer.nsi:
+	  add back nsis mechanism to check for missing strings
+
+2008-07-01  deckrider
+
+	* /bot-sentry/trunk/src/bot-sentry.c:
+	  If the auth request comes from someone on the buddy list but the
+	  policy is to deny all requests, prompt instead of following the
+	  policy.
+
+	* /bot-sentry/trunk/src/bot-sentry.c:
+	  make the new options more consistent with the older ones
+
+	* /bot-sentry/trunk/AUTHORS, /bot-sentry/trunk/Makefile.am,
+	  /bot-sentry/trunk/NEWS, /bot-sentry/trunk/autogen.sh,
+	  /bot-sentry/trunk/configure.ac,
+	  /bot-sentry/trunk/mingw-purple-dev.sh,
+	  /bot-sentry/trunk/nsis/Arabic.nsh,
+	  /bot-sentry/trunk/nsis/Czech.nsh,
+	  /bot-sentry/trunk/nsis/English.nsh,
+	  /bot-sentry/trunk/nsis/German.nsh,
+	  /bot-sentry/trunk/nsis/Italian.nsh,
+	  /bot-sentry/trunk/nsis/Norwegian.nsh,
+	  /bot-sentry/trunk/nsis/Russian.nsh,
+	  /bot-sentry/trunk/nsis/Spanish.nsh,
+	  /bot-sentry/trunk/nsis/installer.nsi,
+	  /bot-sentry/trunk/po/ChangeLog, /bot-sentry/trunk/po/LINGUAS,
+	  /bot-sentry/trunk/po/Makevars.in,
+	  /bot-sentry/trunk/po/POTFILES.in, /bot-sentry/trunk/po/ar.po,
+	  /bot-sentry/trunk/po/cs.po, /bot-sentry/trunk/po/de.po,
+	  /bot-sentry/trunk/po/es.po, /bot-sentry/trunk/po/it.po,
+	  /bot-sentry/trunk/po/no.po, /bot-sentry/trunk/po/ru.po,
+	  /bot-sentry/trunk/src/bot-sentry.c:
+	  correct more svn properties
+
+	* /bot-sentry/trunk/nsis/Russian.nsh:
+	  add sol-style CRLF property to the new Russian.nsh translation
+
+	* /bot-sentry/trunk/po/ar.po, /bot-sentry/trunk/po/cs.po,
+	  /bot-sentry/trunk/po/de.po, /bot-sentry/trunk/po/es.po,
+	  /bot-sentry/trunk/po/it.po, /bot-sentry/trunk/po/no.po,
+	  /bot-sentry/trunk/po/ru.po:
+	  update-po for modified strings
+
+	* /bot-sentry/trunk/src/bot-sentry.c:
+	  UI preference improvements for the new auth request functionality
+
+2008-06-30  deckrider
+
+	* /bot-sentry/trunk/nsis/Arabic.nsh,
+	  /bot-sentry/trunk/nsis/Czech.nsh,
+	  /bot-sentry/trunk/nsis/English.nsh,
+	  /bot-sentry/trunk/nsis/German.nsh,
+	  /bot-sentry/trunk/nsis/Italian.nsh,
+	  /bot-sentry/trunk/nsis/Norwegian.nsh,
+	  /bot-sentry/trunk/nsis/Russian.nsh,
+	  /bot-sentry/trunk/nsis/Spanish.nsh,
+	  /bot-sentry/trunk/nsis/installer.nsi:
+	  upgrade to use NSIS v2.37, which seems to primarily change some
+	  of the i18n logistics
+
+2008-06-29  deckrider
+
+	* /bot-sentry/trunk/configure.ac,
+	  /bot-sentry/trunk/src/bot-sentry.c:
+	  This section of preprocessor code is only needed if you're
+	  building against version 2.1.0 or newer. There were some
+	  additions to some function prototypes in libpurple to add GCC
+	  4.x's NULL sentinel attribute. This will cause issues on many
+	  platforms, including Windows, if the version of GLib in use is
+	  rather old (2.6.x or older). There is an additional wrinkle to
+	  the problem in that only GCC 4.x have this function attribute, so
+	  the workaround is a more complex set of preprocessor directives
+	  than we'd like.
+
+	* /bot-sentry/trunk/Makefile.am,
+	  /bot-sentry/trunk/nsis/Russian.nsh:
+	  New Russian nsis translation, thanks: Yury A. Romanov
+
+	* /bot-sentry/trunk/po/ru.po:
+	  Russian translation update, thanks: Yury A. Romanov
+
+	* /bot-sentry/trunk/po/LINGUAS, /bot-sentry/trunk/po/ar.po,
+	  /bot-sentry/trunk/po/cs.po, /bot-sentry/trunk/po/de.po,
+	  /bot-sentry/trunk/po/es.po, /bot-sentry/trunk/po/it.po,
+	  /bot-sentry/trunk/po/no.po, /bot-sentry/trunk/po/ru.po:
+	  update-po
+
+	* /bot-sentry/trunk/po/ru.po:
+	  russian translation, thanks: Виктор
+
+	* /bot-sentry/trunk/po/cs.po:
+	  Czech translation update, thanks: Luboš Staněk
+
+	* /bot-sentry/trunk/src/bot-sentry.c:
+	  better #if syntax to cover more version possibilities
+
+2008-06-28  deckrider
+
+	* /bot-sentry/trunk/src/bot-sentry.c:
+	  add option to automatically handle auth requests
+
+	* /bot-sentry/trunk/Makefile.am, /bot-sentry/trunk/autogen.sh,
+	  /bot-sentry/trunk/configure.ac:
+	  Upgrade to intltool 0.40.0. Do better defaulting of prefix. Check
+	  and print warning if the bot-sentry libdir does not match the
+	  purple libdir.
+
+2007-06-16  deckrider
+
+	* /bot-sentry/trunk/configure.ac:
+	  development continues after 1.1.0
+
+	* /bot-sentry/trunk/autogen.sh:
+	  work around for missing install-exec target in po/Makefile.in.in
+	  (http://bugzilla.gnome.org/show_bug.cgi?id=448200)
+
+	* /bot-sentry/trunk/Makefile.am:
+	  add update-po to top Makefile.am for convenience
+
+	* /bot-sentry/trunk/Makefile.am:
+	  remove old plugin names for safety
+
+	* /bot-sentry/trunk/NEWS:
+	  add information about the new per-account feature and how to
+	  specify the plugin dir for installation
+
+2007-06-11  deckrider
+
+	* /bot-sentry/trunk/po/it.po:
+	  Italian translation updated (Meo Bogliolo)
+
+2007-06-08  deckrider
+
+	* /bot-sentry/trunk/po/de.po:
+	  German translatin updated (Jens Ibe)
+
+	* /bot-sentry/trunk/Makefile.am, /bot-sentry/trunk/nsis/Arabic.nsh,
+	  /bot-sentry/trunk/po/LINGUAS, /bot-sentry/trunk/po/ar.po:
+	  Add Arabic translation (Nowar Al-Naffouri)
+
+2007-06-07  deckrider
+
+	* /bot-sentry/trunk/po/ar.po, /bot-sentry/trunk/po/cs.po,
+	  /bot-sentry/trunk/po/de.po, /bot-sentry/trunk/po/es.po,
+	  /bot-sentry/trunk/po/it.po, /bot-sentry/trunk/po/no.po:
+	  update-po
+
+2007-06-06  deckrider
+
+	* /bot-sentry/trunk/src/bot-sentry.c:
+	  a little cleaner plugin_unload(), using g_list_remove() and some
+	  better variable names
+
+2007-06-03  deckrider
+
+	* /bot-sentry/trunk/po/it.po:
+	  Italian translation updated (Meo Bogliolo)
+
+2007-05-31  deckrider
+
+	* /bot-sentry/trunk/nsis/installer.nsi:
+	  now that we've renamed, be certain to clean up any old names
+	  already installed
+
+2007-05-30  deckrider
+
+	* /bot-sentry/trunk/po/ar.po, /bot-sentry/trunk/po/cs.po,
+	  /bot-sentry/trunk/po/de.po, /bot-sentry/trunk/po/es.po,
+	  /bot-sentry/trunk/po/it.po, /bot-sentry/trunk/po/no.po:
+	  replace pidgin-bs with bot-sentry and update Project-Id-Version
+
+	* /bot-sentry, /pidgin-bs:
+	  rename pidgin-bs to bot-sentry, even in subversion
+
+	* /pidgin-bs/trunk/po/ar.po, /pidgin-bs/trunk/po/cs.po,
+	  /pidgin-bs/trunk/po/de.po, /pidgin-bs/trunk/po/es.po,
+	  /pidgin-bs/trunk/po/it.po, /pidgin-bs/trunk/po/no.po:
+	  no longer using 'pidgin' in the file name causes the po files to
+	  be updated too
+
+	* /pidgin-bs/trunk/nsis/Czech.nsh,
+	  /pidgin-bs/trunk/nsis/English.nsh,
+	  /pidgin-bs/trunk/nsis/German.nsh,
+	  /pidgin-bs/trunk/nsis/Italian.nsh,
+	  /pidgin-bs/trunk/nsis/Norwegian.nsh,
+	  /pidgin-bs/trunk/nsis/Spanish.nsh,
+	  /pidgin-bs/trunk/nsis/installer.nsi:
+	  include nsis files in the renaming effort
+
+	* /pidgin-bs/trunk/Makefile.am, /pidgin-bs/trunk/README,
+	  /pidgin-bs/trunk/README.mingw, /pidgin-bs/trunk/autogen.sh,
+	  /pidgin-bs/trunk/configure.ac,
+	  /pidgin-bs/trunk/mingw-pidgin-dev.sh,
+	  /pidgin-bs/trunk/mingw-purple-dev.sh,
+	  /pidgin-bs/trunk/po/POTFILES.in,
+	  /pidgin-bs/trunk/src/bot-sentry.c,
+	  /pidgin-bs/trunk/src/pidgin-bs.c:
+	  more renaming madness: stop using pidgin/gaim/purple in the name,
+	  follow the naming conventions shown at
+	  http://developer.pidgin.im/doxygen/dev/html/plugin-ids.html, no
+	  need to use 'lib' as part of the plugin file name
+
+2007-05-29  deckrider
+
+	* /pidgin-bs/trunk/po/ar.po:
+	  new string for account-by-account activation
+
+	* /pidgin-bs/trunk/po/cs.po, /pidgin-bs/trunk/po/de.po,
+	  /pidgin-bs/trunk/po/es.po, /pidgin-bs/trunk/po/it.po,
+	  /pidgin-bs/trunk/po/no.po, /pidgin-bs/trunk/src/pidgin-bs.c:
+	  new string for account-by-account activation
+
+2007-05-28  deckrider
+
+	* /pidgin-bs/trunk/src/pidgin-bs.c:
+	  formatting
+
+	* /pidgin-bs/trunk/configure.ac, /pidgin-bs/trunk/src/pidgin-bs.c:
+	  allow bot sentry to be disabled on a per-account basis (bug
+	  #1671981), use John Bailey's suggestion to implement it via
+	  account prefs similar to the irchelper plugin
+
+2007-05-26  deckrider
+
+	* /pidgin-bs/trunk/autogen.sh:
+	  allow generation of ChangeLog to work nice from a tag
+
+	* /pidgin-bs/trunk/configure.ac:
+	  continue development on trunk
+
+	* /pidgin-bs/trunk/configure.ac:
+	  Release 1.0.0
+
+	* /pidgin-bs/trunk/NEWS:
+	  update NEWS
+
+	* /pidgin-bs/trunk/autogen.sh:
+	  create a dummy ChangeLog before running intltooize/autoreconf
+
+	* /pidgin-bs/trunk/ChangeLog:
+	  generate ChangeLog from autogen.sh
+
+	* /pidgin-bs/trunk/ChangeLog, /pidgin-bs/trunk/autogen.sh:
+	  generate ChangeLog from autogen.sh
+
+	* /pidgin-bs/trunk/po/ChangeLog:
+	  This ChangeLog will not be used. See the package ChangeLog
+	  instead.
+
+	* /pidgin-bs/trunk/nsis/Italian.nsh:
+	  CRLF for nsis files
+
+	* /pidgin-bs/trunk/README.mingw:
+	  remove GAIM from variable name
+
+2007-05-24  deckrider
+
+	* /pidgin-bs/trunk/po/ar.po, /pidgin-bs/trunk/po/cs.po,
+	  /pidgin-bs/trunk/po/es.po, /pidgin-bs/trunk/po/it.po,
+	  /pidgin-bs/trunk/po/no.po:
+	  make update-po
+
+	* /pidgin-bs/trunk/po/de.po:
+	  German translation updated(Jens Ibe)
+
+	* /pidgin-bs/trunk/Makefile.am, /pidgin-bs/trunk/configure.ac,
+	  /pidgin-bs/trunk/src/pidgin-bs.c:
+	  allow building the plugin without NLS
+
+	* /pidgin-bs/trunk/README.mingw:
+	  intltool/glib-gettext changes
+
+	* /pidgin-bs/trunk/po/cs.po:
+	  Czech translation updated (Luboš Staněk)
+
+2007-05-22  deckrider
+
+	* /pidgin-bs/trunk/configure.ac:
+	  provide the reference for the AC_CONFIG_AUX_DIR intltool bug
+
+	* /pidgin-bs/trunk/Makefile.am:
+	  distcheck fixes
+
+	* /pidgin-bs/trunk/configure.ac, /pidgin-bs/trunk/po/Makevars.in,
+	  /pidgin-bs/trunk/po/cs.po, /pidgin-bs/trunk/po/de.po,
+	  /pidgin-bs/trunk/po/es.po, /pidgin-bs/trunk/po/it.po,
+	  /pidgin-bs/trunk/po/no.po:
+	  use po/Makevars and merge in new strings
+
+	* /pidgin-bs/trunk/configure.ac:
+	  more accurate comment
+
+	* /pidgin-bs/trunk/configure.ac:
+	  after converting to intltool/glib-gettext, autoscan doesn't
+	  recommend as many checks
+
+	* /pidgin-bs/trunk/Makefile.am:
+	  use INTLLIBS instead of LTLIBINTL, now that intltool is being
+	  used
+
+	* /pidgin-bs/trunk/configure.ac, /pidgin-bs/trunk/po/LINGUAS:
+	  bring back po/LINGUAS, since it seems to be supported with
+	  intltool; be more consistent with configure output
+
+	* /pidgin-bs/trunk/src/pidgin-bs.c:
+	  fix compiler warning
+
+	* /pidgin-bs/trunk/Makefile.am:
+	  distcheck fixes
+
+	* /pidgin-bs/trunk/src/pidgin-bs.c:
+	  spelling fixes
+
+	* /pidgin-bs/trunk/src/pidgin-bs.c:
+	  formatting changes
+
+	* /pidgin-bs/trunk/src/pidgin-bs.c:
+	  deal with conflicting psychic plugin settings
+
+2007-05-21  deckrider
+
+	* /pidgin-bs/trunk/Makefile.am, /pidgin-bs/trunk/configure.ac,
+	  /pidgin-bs/trunk/po/ChangeLog, /pidgin-bs/trunk/po/POTFILES.in:
+	  some formatting and distcheck changes
+
+	* /pidgin-bs/trunk/Makefile.am, /pidgin-bs/trunk/autogen.sh,
+	  /pidgin-bs/trunk/configure.ac, /pidgin-bs/trunk/po/LINGUAS,
+	  /pidgin-bs/trunk/po/Makevars, /pidgin-bs/trunk/src/gettext.h,
+	  /pidgin-bs/trunk/src/pidgin-bs.c:
+	  follow 'Third Party Plugin Translation Support' instructions from
+	  http://developer.pidgin.im/doxygen/dev/html/plugin-i18n.html
+
+2007-05-18  deckrider
+
+	* /pidgin-bs/trunk/configure.ac:
+	  check for headers and a little better re-checking of gettext
+
+2007-05-17  deckrider
+
+	* /pidgin-bs/trunk/Makefile.am, /pidgin-bs/trunk/configure.ac:
+	  try to allow a way forward in case pkg-config is wrong,
+	  loosen/override the gettext check
+
+2007-05-16  deckrider
+
+	* /pidgin-bs/trunk/nsis/installer.nsi:
+	  NoModify and NoRepair should be DWORD
+
+2007-05-15  deckrider
+
+	* /pidgin-bs/trunk/Makefile.am, /pidgin-bs/trunk/configure.ac,
+	  /pidgin-bs/trunk/nsis/installer.nsi:
+	  remove some program checks, split version into its three
+	  components, try to remove old gaim-bs win32 components during
+	  win32 install
+
+	* /pidgin-bs/trunk/Makefile.am, /pidgin-bs/trunk/README.mingw,
+	  /pidgin-bs/trunk/nsis/installer.nsi, /pidgin-bs/trunk/po/cs.po,
+	  /pidgin-bs/trunk/po/de.po, /pidgin-bs/trunk/po/es.po,
+	  /pidgin-bs/trunk/po/it.po, /pidgin-bs/trunk/po/no.po:
+	  better nsis target, including distcheck
+
+2007-05-14  deckrider
+
+	* /pidgin-bs/trunk/Makefile.am, /pidgin-bs/trunk/configure.ac,
+	  /pidgin-bs/trunk/src/pidgin-bs.c:
+	  formatting, no more need for some casts, more autotools tweeks
+
+2007-05-13  deckrider
+
+	* /pidgin-bs/trunk/src/pidgin-bs.c:
+	  compiler warnings
+
+	* /pidgin-bs/trunk/src/gettext.h, /pidgin-bs/trunk/src/pidgin-bs.c:
+	  latest gettext.h and formatting of pidgin-bs.c
+
+	* /pidgin-bs/trunk/Makefile.am, /pidgin-bs/trunk/configure.ac:
+	  more autoconf reorganizing
+
+	* /pidgin-bs/trunk/Makefile.am:
+	  simplified exe name
+
+	* /pidgin-bs/trunk/nsis/locale:
+	  nsis/locale no longer needed
+
+	* /pidgin-bs/trunk/Makefile.am, /pidgin-bs/trunk/po/cs.po,
+	  /pidgin-bs/trunk/po/de.po, /pidgin-bs/trunk/po/es.po,
+	  /pidgin-bs/trunk/po/it.po, /pidgin-bs/trunk/po/no.po:
+	  correct libs value, and make distcheck
+
+	* /pidgin-bs/trunk/Makefile.am, /pidgin-bs/trunk/README,
+	  /pidgin-bs/trunk/configure.ac, /pidgin-bs/trunk/nsis/Czech.nsh,
+	  /pidgin-bs/trunk/nsis/English.nsh,
+	  /pidgin-bs/trunk/nsis/German.nsh,
+	  /pidgin-bs/trunk/nsis/Italian.nsh,
+	  /pidgin-bs/trunk/nsis/Makefile.am,
+	  /pidgin-bs/trunk/nsis/Norwegian.nsh,
+	  /pidgin-bs/trunk/nsis/Spanish.nsh,
+	  /pidgin-bs/trunk/nsis/config.nsh.in,
+	  /pidgin-bs/trunk/nsis/installer.nsi,
+	  /pidgin-bs/trunk/nsis/locale/Czech.nsh,
+	  /pidgin-bs/trunk/nsis/locale/English.nsh,
+	  /pidgin-bs/trunk/nsis/locale/German.nsh,
+	  /pidgin-bs/trunk/nsis/locale/Italian.nsh,
+	  /pidgin-bs/trunk/nsis/locale/Makefile.am,
+	  /pidgin-bs/trunk/nsis/locale/Norwegian.nsh,
+	  /pidgin-bs/trunk/nsis/locale/Spanish.nsh,
+	  /pidgin-bs/trunk/src/Makefile.am,
+	  /pidgin-bs/trunk/src/pidgin-bs.c:
+	  fewer makefiles and no longer support gaim version 1
+
+2007-05-12  deckrider
+
+	* /pidgin-bs/trunk/README.mingw,
+	  /pidgin-bs/trunk/mingw-pidgin-dev.sh:
+	  more gaim to pidgin changes
+
+	* /pidgin-bs/trunk/README.mingw, /pidgin-bs/trunk/po/ar.po,
+	  /pidgin-bs/trunk/po/cs.po, /pidgin-bs/trunk/po/de.po,
+	  /pidgin-bs/trunk/po/es.po, /pidgin-bs/trunk/po/it.po,
+	  /pidgin-bs/trunk/po/no.po:
+	  more name changes
+
+	* /pidgin-bs/trunk/Makefile.am,
+	  /pidgin-bs/trunk/nsis/installer.nsi,
+	  /pidgin-bs/trunk/nsis/locale/Czech.nsh,
+	  /pidgin-bs/trunk/nsis/locale/English.nsh,
+	  /pidgin-bs/trunk/nsis/locale/German.nsh,
+	  /pidgin-bs/trunk/nsis/locale/Italian.nsh,
+	  /pidgin-bs/trunk/nsis/locale/Norwegian.nsh,
+	  /pidgin-bs/trunk/nsis/locale/Spanish.nsh:
+	  nsis kit builds with new pidgin/purple names
+
+	* /pidgin-bs/trunk/mingw-pidgin-dev.sh:
+	  better variable name
+
+	* /pidgin-bs/trunk/README.mingw,
+	  /pidgin-bs/trunk/mingw-pidgin-dev.sh:
+	  mingw-pidgin-dev.sh and README.mingw work with pidgin 2.0.0
+
+	* /pidgin-bs/trunk/README:
+	  Gaim to Pidgin
+
+	* /pidgin-bs/trunk/Makefile.am, /pidgin-bs/trunk/mingw-gaim-dev.sh,
+	  /pidgin-bs/trunk/mingw-pidgin-dev.sh,
+	  /pidgin-bs/trunk/nsis/config.nsh.in, /pidgin-bs/trunk/po/cs.po,
+	  /pidgin-bs/trunk/po/de.po, /pidgin-bs/trunk/po/es.po,
+	  /pidgin-bs/trunk/po/it.po, /pidgin-bs/trunk/po/no.po:
+	  pidgin/purple renaming and distcheck fixes
+
+	* /pidgin-bs/trunk/ChangeLog, /pidgin-bs/trunk/Makefile.am,
+	  /pidgin-bs/trunk/configure.ac, /pidgin-bs/trunk/po/POTFILES.in,
+	  /pidgin-bs/trunk/po/cs.po, /pidgin-bs/trunk/po/de.po,
+	  /pidgin-bs/trunk/po/es.po, /pidgin-bs/trunk/po/it.po,
+	  /pidgin-bs/trunk/po/no.po, /pidgin-bs/trunk/src/Makefile.am,
+	  /pidgin-bs/trunk/src/gaim-bs.c, /pidgin-bs/trunk/src/pidgin-bs.c:
+	  convert to pidgin/purple for unix and use --prefix, --libdir,
+	  --localedir for install locations
+
+	* /pidgin-bs/trunk/configure.ac:
+	  -Wall -Werror for automake
+
+	* /pidgin-bs/trunk/configure.ac, /pidgin-bs/trunk/po/LINGUAS,
+	  /pidgin-bs/trunk/src/gaim-bs.c:
+	  autoconf 2.61, automake 1.10, gettext 0.16.1, use
+	  AC_CONFIG_AUX_DIR, make gcc produce more warnings
+
+	* /gaim-bs, /pidgin-bs:
+	  rename gaim-bs to pidgin-bs
+
+2006-12-12  deckrider
+
+	* /gaim-bs/trunk/ChangeLog, /gaim-bs/trunk/configure.ac,
+	  /gaim-bs/trunk/nsis/locale/Czech.nsh,
+	  /gaim-bs/trunk/nsis/locale/Makefile.am,
+	  /gaim-bs/trunk/po/LINGUAS, /gaim-bs/trunk/po/ar.po,
+	  /gaim-bs/trunk/po/cs.po, /gaim-bs/trunk/po/de.po,
+	  /gaim-bs/trunk/po/es.po, /gaim-bs/trunk/po/it.po,
+	  /gaim-bs/trunk/po/no.po, /gaim-bs/trunk/src/Makefile.am:
+	  Add Czech translations, thanks: Luboš Staněk
+	  <lubek@users.sourceforge.net>
+
+2006-11-22  deckrider
+
+	* /gaim-bs/trunk/ChangeLog, /gaim-bs/trunk/README.mingw,
+	  /gaim-bs/trunk/configure.ac, /gaim-bs/trunk/mingw-gaim-dev.sh,
+	  /gaim-bs/trunk/po/ar.po, /gaim-bs/trunk/po/de.po,
+	  /gaim-bs/trunk/po/es.po, /gaim-bs/trunk/po/it.po,
+	  /gaim-bs/trunk/po/no.po:
+	  adapt README.mingw and mingw-gaim-dev.sh to allow for building
+	  libgaim.dll in gaim-2.0.0beta5, and prepare for gaim-bs 0.10.1
+
+2006-03-13  deckrider
+
+	* /gaim-bs/trunk/po/ar.po:
+	  Try reversing the Arabic so that it looks correct while in
+	  right-to-left mode.
+
+2006-03-10  deckrider
+
+	* /gaim-bs/trunk/po/LINGUAS, /gaim-bs/trunk/po/ar.po:
+	  trial of 7 arabic strings
+
+2006-03-01  deckrider
+
+	* /gaim-bs/trunk/configure.ac:
+	  continuing development after release 0.10.0
+
+	* /gaim-bs/trunk/po/de.po, /gaim-bs/trunk/po/es.po,
+	  /gaim-bs/trunk/po/it.po, /gaim-bs/trunk/po/no.po:
+	  updated po files
+
+	* /gaim-bs/trunk/nsis/installer.nsi:
+	  reposition validation so that a user doesn't have to exit/restart
+	  the installer once a requirement has been satisfied
+
+2006-02-28  deckrider
+
+	* /gaim-bs/trunk/configure.ac:
+	  upcoming release is 0.10.0
+
+	* /gaim-bs/trunk/configure.ac:
+	  prepare for 0.10.0 release
+
+	* /gaim-bs/trunk/Makefile.am:
+	  add mingw-gaim-dev.sh to Makefile.am
+
+	* /gaim-bs/trunk/ChangeLog, /gaim-bs/trunk/nsis/locale/Italian.nsh,
+	  /gaim-bs/trunk/nsis/locale/Makefile.am,
+	  /gaim-bs/trunk/po/LINGUAS, /gaim-bs/trunk/po/it.po:
+	  Italian translation, thanks Meo Bogliolo <meo@bogliolo.name>
+
+2006-02-27  deckrider
+
+	* /gaim-bs/trunk/nsis/installer.nsi:
+	  Windows Installer: distinguish between no permission and
+	  inability to find the registry key for gaim or gaim-bs
+
+	* /gaim-bs/trunk/nsis/locale/English.nsh:
+	  corrected english
+
+	* /gaim-bs/trunk/README, /gaim-bs/trunk/configure.ac,
+	  /gaim-bs/trunk/nsis/config.nsh.in,
+	  /gaim-bs/trunk/nsis/installer.nsi, /gaim-bs/trunk/po/Makevars,
+	  /gaim-bs/trunk/src/gaim-bs.c:
+	  use http://gaim-bs.sourceforge.net/ as PACKAGE_BUGREPORT and use
+	  PACKAGE_BUGREPORT to propagate this address
+
+2006-02-25  deckrider
+
+	* /gaim-bs/trunk/nsis/installer.nsi:
+	  remove broken duplicate installer detection routine
+
+2006-02-24  deckrider
+
+	* /gaim-bs/trunk/README, /gaim-bs/trunk/README.mingw:
+	  more documentation fixes
+
+	* /gaim-bs/trunk/README.mingw:
+	  more mingw documentation
+
+	* /gaim-bs/trunk/README:
+	  note that gaim-bs works with gaim major version 1 or 2
+
+	* /gaim-bs/trunk/AUTHORS, /gaim-bs/trunk/README,
+	  /gaim-bs/trunk/src/gaim-bs.c:
+	  documentation changes
+
+	* /gaim-bs/trunk/README.mingw:
+	  svn:eol-style CRLF
+
+	* /gaim-bs/trunk/nsis/config.nsh.in,
+	  /gaim-bs/trunk/nsis/installer.nsi,
+	  /gaim-bs/trunk/nsis/locale/English.nsh,
+	  /gaim-bs/trunk/nsis/locale/German.nsh,
+	  /gaim-bs/trunk/nsis/locale/Norwegian.nsh,
+	  /gaim-bs/trunk/nsis/locale/Spanish.nsh:
+	  latin1 and dos format for nsis files
+
+2006-02-23  deckrider
+
+	* /gaim-bs/trunk/nsis/config.nsh.in,
+	  /gaim-bs/trunk/nsis/installer.nsi,
+	  /gaim-bs/trunk/nsis/locale/English.nsh,
+	  /gaim-bs/trunk/nsis/locale/German.nsh,
+	  /gaim-bs/trunk/nsis/locale/Norwegian.nsh,
+	  /gaim-bs/trunk/nsis/locale/Spanish.nsh:
+	  set svn:eol-style CRLF on nsis files
+
+	* /gaim-bs/trunk/README.mingw, /gaim-bs/trunk/mingw-gaim-dev.sh:
+	  new process to get a mingw gaim development environment
+
+	* /gaim-bs/trunk/ChangeLog, /gaim-bs/trunk/nsis/locale/Makefile.am,
+	  /gaim-bs/trunk/nsis/locale/Norwegian.nsh,
+	  /gaim-bs/trunk/po/LINGUAS, /gaim-bs/trunk/po/no.po:
+	  Norwegian translation, thanks: I. O. Karlsen
+	  <arcusc@users.sourceforge.net>
+
+	* /gaim-bs/trunk/ChangeLog, /gaim-bs/trunk/nsis/locale/English.nsh,
+	  /gaim-bs/trunk/nsis/locale/German.nsh,
+	  /gaim-bs/trunk/nsis/locale/Makefile.am,
+	  /gaim-bs/trunk/nsis/locale/Spanish.nsh:
+	  Spanish translation, thanks: Fredo
+	  <fredoguy@users.sourceforge.net>
+
+	* /gaim-bs/trunk/po/es.po:
+	  updated es.po, thanks: Fredo <fredoguy@users.sourceforge.net>
+
+	* /gaim-bs/trunk/po/es.po:
+	  fix email address
+
+2006-02-22  deckrider
+
+	* /gaim-bs/trunk/po/LINGUAS, /gaim-bs/trunk/po/es.po:
+	  Spanish translation. Thanks: fredoguy@users.sourceforge.net
+
+	* /gaim-bs/trunk/po/es.po, /gaim-bs/trunk/po/it.po,
+	  /gaim-bs/trunk/po/no.po:
+	  new empty translations
+
+	* /gaim-bs/trunk/po/Makevars, /gaim-bs/trunk/po/de.po:
+	  correct the COPYRIGHT_HOLDER and the MSGID_BUGS_ADDRESS
+
+	* /gaim-bs/trunk/po/de.po:
+	  slight rework of de.po headers
+
+	* /gaim-bs/trunk/nsis/config.nsh.in,
+	  /gaim-bs/trunk/nsis/installer.nsi,
+	  /gaim-bs/trunk/nsis/locale/English.nsh,
+	  /gaim-bs/trunk/nsis/locale/German.nsh:
+	  propset eol-style CRLF on *.nsh *.nsi files
+
+2006-02-21  deckrider
+
+	* /gaim-bs/trunk/README.mingw:
+	  use proper filesystem layout
+
+2006-02-18  deckrider
+
+	* /gaim-bs/trunk/README.svn:
+	  for mingw to use --auto-image-base, libtool 1.5.22 is required
+
+	* /gaim-bs/trunk/README.mingw:
+	  No need for --enable-nls with mingw builds
+
+	* /gaim-bs/trunk/configure.ac:
+	  slightly better way to find GAIM_MAJOR_VERSION
+
+	* /gaim-bs/trunk/configure.ac, /gaim-bs/trunk/src/Makefile.am:
+	  moved/renames variables and flags
+
+	* /gaim-bs/trunk/configure.ac, /gaim-bs/trunk/src/Makefile.am:
+	  move -no-undefined to src/Makefile.am, since it can work for all
+	  builds, not just mingw
+
+	* /gaim-bs/trunk/Makefile.am, /gaim-bs/trunk/configure.ac,
+	  /gaim-bs/trunk/nsis/config.nsh.in,
+	  /gaim-bs/trunk/nsis/installer.nsi, /gaim-bs/trunk/src/gaim-bs.c:
+	  more accurate version management
+
+2006-02-17  deckrider
+
+	* /gaim-bs/trunk/Makefile.am:
+	  Still adjusting the nsis integration and cleanup
+
+	* /gaim-bs/trunk/configure.ac, /gaim-bs/trunk/nsis/config.nsh.in,
+	  /gaim-bs/trunk/nsis/installer.nsi, /gaim-bs/trunk/src/gaim-bs.c:
+	  Use <> instead of "" for including gaim headers in src/gaim-bs.c.
+	  Build nsis package file name using only GAIM_MAJOR_VERSION
+	  instead of the complete GAIM_VERSION string.
+
+	* /gaim-bs/trunk/configure.ac:
+	  more win32 integration
+
+2006-02-16  deckrider
+
+	* /gaim-bs/trunk/ChangeLog, /gaim-bs/trunk/src/gaim-bs.c:
+	  fixed protocol comparison to actually compare the protocol
+
+2006-02-15  deckrider
+
+	* /gaim-bs/trunk/Makefile.am:
+	  fixed trivial bug in testing whether DESTDIR needs to be cleaned
+	  up
+
+	* /gaim-bs/trunk/nsis/installer.nsi:
+	  remove libbot-challenger.dll during install, since the two
+	  conflict
+
+	* /gaim-bs/trunk/ChangeLog:
+	  change log formatting
+
+	* /gaim-bs/trunk/ChangeLog:
+	  updated changelog
+
+	* /gaim-bs/trunk/Makefile.am, /gaim-bs/trunk/README.mingw,
+	  /gaim-bs/trunk/configure.ac, /gaim-bs/trunk/nsis/installer.nsi:
+	  integrate nsis build with 'make install'
+
+2006-02-14  deckrider
+
+	* /gaim-bs/trunk/nsis/locale/English.nsh:
+	  Better English
+
+	* /gaim-bs/trunk/nsis/installer.nsi:
+	  Add a FIXME comment
+
+	* /gaim-bs/trunk/nsis/installer.nsi:
+	  Do version checking internally. This allows simplification of the
+	  code using StrTok from StrFunc.nsh and eliminates the uncertainty
+	  of where and how to find gaim-plugin.nsh in the build process.
+
+	* /gaim-bs/trunk/po/de.po:
+	  make update-po
+
+	* /gaim-bs/trunk/configure.ac, /gaim-bs/trunk/nsis/Makefile.am,
+	  /gaim-bs/trunk/nsis/config.nsh.in,
+	  /gaim-bs/trunk/nsis/installer.nsi, /gaim-bs/trunk/src/gaim-bs.c:
+	  Integrate NSIS package with autoconf by having autoconf build
+	  config.nsh.
+	  
+	  No longer need to !undef LOCALEDIR in src/gaim-bs.c under win32,
+	  since we only define it for non-mingw builds.
+
+2006-02-13  deckrider
+
+	* /gaim-bs/trunk/configure.ac, /gaim-bs/trunk/nsis/installer.nsi,
+	  /gaim-bs/trunk/src/Makefile.am:
+	  The mingw build should install plugins in "$GAIM_LIBDIR/plugins".
+	  The mingw build should not use -DLOCALEDIR (LOCALEDIR is a
+	  wingaim function). Show the localization installation directory
+	  when configure finishes. Follow the wingaim convention of
+	  installing to "`pwd`/win32-install-dir". Let NSIS
+	  install/uninstall everything that "make install" provides.
+
+2006-02-11  deckrider
+
+	* /gaim-bs/trunk/ChangeLog, /gaim-bs/trunk/po/de.po:
+	  updated changelog
+
+	* /gaim-bs/trunk/nsis/installer.nsi:
+	  use MUI_WELCOMEPAGE_TITLE_3LINES and MUI_FINISHPAGE_TITLE_3LINES
+	  for (un)installer
+
+	* /gaim-bs/trunk/po/de.po, /gaim-bs/trunk/src/gaim-bs.c:
+	  fix translation of GaimPluginInfo members to use _() and not N_()
+
+	* /gaim-bs/trunk/po/LINGUAS, /gaim-bs/trunk/po/de.po:
+	  Add German translation; thanks: Jens Ibe <ibus85@web.de>
+
+	* /gaim-bs/trunk/nsis/locale/Makefile.am:
+	  add German.nsh to nsis/locale/Makefile.am
+
+	* /gaim-bs/trunk/nsis/installer.nsi:
+	  windows build adjustments
+
+	* /gaim-bs/trunk/nsis/locale/German.nsh:
+	  add EOL
+
+	* /gaim-bs/trunk/nsis/locale/German.nsh:
+	  German nsis translation. Thanks: Ibus <ibus85@web.de>
+
+	* /gaim-bs/trunk/nsis/installer.nsi:
+	  fix _DEFAULT_SYMBOL bug
+
+2006-02-10  deckrider
+
+	* /gaim-bs/trunk/nsis/installer.nsi,
+	  /gaim-bs/trunk/nsis/locale/English.nsh,
+	  /gaim-bs/trunk/nsis/locale/Makefile.am:
+	  Add correct capitalization to Makefile.am and set DOS file
+	  properties on locale/English.nsh and installer.nsi
+
+	* /gaim-bs/trunk/nsis/installer.nsi,
+	  /gaim-bs/trunk/nsis/locale/English.nsh,
+	  /gaim-bs/trunk/nsis/locale/english.nsh:
+	  Added language fallback logic for missing strings. It will fall
+	  back to the language in which the string was first defined.
+
+2006-02-09  deckrider
+
+	* /gaim-bs/trunk/nsis/installer.nsi,
+	  /gaim-bs/trunk/nsis/locale/english.nsh:
+	  - Add MUI_UNABORTWARNING so uninstaller has the same behavior as
+	  installer. - Language variable name changes. - It seems that
+	  "un." prefix is not needed for language variables. - Fix
+	  misplaced language variable so that GBS_GAIM_IS_RUNNING is
+	  displayed when gaim is running.
+
+2006-02-08  deckrider
+
+	* /gaim-bs/trunk/nsis/installer.nsi,
+	  /gaim-bs/trunk/nsis/locale/english.nsh:
+	  silent installation error checking/handlign and first cut at
+	  initial english language strings
+
+2006-02-07  deckrider
+
+	* /gaim-bs/trunk/nsis/installer.nsi:
+	  Slight logic change for clarity.
+
+	* /gaim-bs/trunk/nsis/installer.nsi:
+	  Use macros to stop duplicate code
+
+	* /gaim-bs/trunk/nsis/installer.nsi:
+	  minor formatting changes
+
+	* /gaim-bs/trunk/nsis/installer.nsi:
+	  Use macros to stop duplicate code
+
+	* /gaim-bs/trunk/README.mingw, /gaim-bs/trunk/nsis/installer.nsi,
+	  /gaim-bs/trunk/nsis/locale/english.nsh:
+	  Rewrite of nsis installer for clarity, using LogicLib.nsh. This
+	  is only the first rough cut. More to follow.
+
+2006-01-24  deckrider
+
+	* /gaim-bs/trunk/nsis/installer.nsi:
+	  add locales to windows installer
+
+2006-01-23  deckrider
+
+	* /gaim-bs/trunk/configure.ac:
+	  Use only external gettext, since the included one cannot be
+	  linked to a shared library with any kind of portabiliy. Put
+	  gcc-specific CFLAGS before mingw CFLAGS so that mingw CFLAGS can
+	  override as needed. Force mingw to use USE_NLS and define
+	  ENABLE_NLS. Remove unused stuff. Add documentation for
+	  PKG_CONFIG_PATH to configure --help.
+
+	* /gaim-bs/trunk/src/Makefile.am:
+	  Do not provide libintl.a with package, since it cannot be used in
+	  a shared library anyway. Remove unused variables.
+	  libgaim_bs_la_LIBADD should be used instead of LDADD, since we
+	  are using libtool to build a shared library. Remove reference to
+	  included intl direcotry, since we don't provide one.
+
+	* /gaim-bs/trunk/Makefile.am:
+	  Do not provide libintl.a with package, since it cannot be used in
+	  a shared library anyway.
+
+	* /gaim-bs/trunk/nsis/installer.nsi:
+	  remove extraneous SetOutPath
+
+2006-01-22  deckrider
+
+	* /gaim-bs/trunk/src/Makefile.am:
+	  Use @LTLIBINTL@ since libtool is used to link the module.
+
+2006-01-21  deckrider
+
+	* /gaim-bs/trunk/src/gaim-bs.c:
+	  Translate a few log entries.
+
+	* /gaim-bs/trunk/src/gaim-bs.c:
+	  Slight spacing change.
+
+	* /gaim-bs/trunk/configure.ac, /gaim-bs/trunk/src/gaim-bs.c:
+	  configure.ac: Don't build/use included libintl under mingw.
+	  src/gaim-bs.c: Indenting and comments changes. Use PACKAGE
+	  instead of hard coding the name. Log the results of
+	  bindtextdomain/bind_textdomain_codeset.
+
+	* /gaim-bs/trunk/src/gaim-bs.c:
+	  (char *) cast to disable warnings when configuring --without-nls
+	  and #include <win32dep.h> to define LOCALEDIR as a function when
+	  building under windows.
+
+2005-12-31  deckrider
+
+	* /gaim-bs/trunk/src/gaim-bs.c:
+	  don't translate plugin id
+
+	* /gaim-bs/trunk/po/gaim-bs.pot:
+	  removing pot file which should be in repository
+
+	* /gaim-bs/trunk/ChangeLog, /gaim-bs/trunk/Makefile.am,
+	  /gaim-bs/trunk/configure.ac, /gaim-bs/trunk/po,
+	  /gaim-bs/trunk/po/LINGUAS, /gaim-bs/trunk/po/Makevars,
+	  /gaim-bs/trunk/po/POTFILES.in, /gaim-bs/trunk/po/gaim-bs.pot,
+	  /gaim-bs/trunk/src/Makefile.am, /gaim-bs/trunk/src/gaim-bs.c,
+	  /gaim-bs/trunk/src/gettext.h:
+	  Initial gettextize. Need translators! Win32 needs to be adapted.
+
+2005-12-27  deckrider
+
+	* /gaim-bs/trunk/README.mingw:
+	  Updated the particulars regarding how to create a build
+	  environment for windows
+
+2005-12-26  deckrider
+
+	* /gaim-bs/trunk/ChangeLog:
+	  Another ChangeLog fix.
+
+	* /gaim-bs/trunk/ChangeLog:
+	  Corrected ChangeLog versions.
+
+	* /gaim-bs/trunk/README.mingw:
+	  updated win32 build environment package references
+
+	* /gaim-bs/trunk/README.mingw:
+	  updated readme for win32 builds
+
+	* /gaim-bs/trunk/configure.ac:
+	  0.6.0 release
+
+	* /gaim-bs/trunk/configure.ac, /gaim-bs/trunk/nsis/installer.nsi,
+	  /gaim-bs/trunk/nsis/locale/english.nsh,
+	  /gaim-bs/trunk/src/Makefile.am, /gaim-bs/trunk/src/gaim-bs.c,
+	  /gaim-bs/trunk/src/gbs.c:
+	  Convert to new sourceforge name: gaim-bs
+
+	* /gaim-bs/trunk/src/gbs.c:
+	  minimize code within #if #else #endif for gaim2
+
+	* /gaim-bs, /gbs:
+	  New project name: gaim-bs.
+
+2005-12-25  deckrider
+
+	* /gbs/trunk/ChangeLog, /gbs/trunk/configure.ac,
+	  /gbs/trunk/src/gbs.c:
+	  Compile and work with Gaim 2.
+
+	* /gbs/trunk/README.mingw:
+	  adding README.mingw
+
+	* /gbs/trunk/src/gbs.c:
+	  fix copyright and indent
+
+2005-12-02  deckrider
+
+	* /gbs/trunk/configure.ac, /gbs/trunk/nsis/installer.nsi,
+	  /gbs/trunk/nsis/locale/english.nsh, /gbs/trunk/src/Makefile.am,
+	  /gbs/trunk/src/bot-sentry.c, /gbs/trunk/src/gbs.c:
+	  use 'gbs' instead of bot-sentry where possible
+
+	* /gbs/trunk/src/bot-sentry.c:
+	  strip html from stranger's answer before comparing with correct
+	  answer
+
+2005-12-01  deckrider
+
+	* /gbs, /gbs/branches, /gbs/tags, /gbs/trunk, /gbs/trunk/AUTHORS,
+	  /gbs/trunk/ChangeLog, /gbs/trunk/Makefile.am, /gbs/trunk/NEWS,
+	  /gbs/trunk/README, /gbs/trunk/README.svn,
+	  /gbs/trunk/configure.ac, /gbs/trunk/nsis,
+	  /gbs/trunk/nsis/Makefile.am, /gbs/trunk/nsis/installer.nsi,
+	  /gbs/trunk/nsis/locale, /gbs/trunk/nsis/locale/Makefile.am,
+	  /gbs/trunk/nsis/locale/english.nsh, /gbs/trunk/src,
+	  /gbs/trunk/src/Makefile.am, /gbs/trunk/src/bot-sentry.c:
+	  Initial commit.
+
