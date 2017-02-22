@@ -87,8 +87,6 @@ static GSList *pending_list = NULL;     /* GSList of PendingMessage */
 
 static guint callback_id;
 
-#define BOT_MAX_MINUTES 10
-
 enum auth_choice
 {
     auth_choice_DENY = -1,
@@ -162,13 +160,14 @@ free_pending(
 }
 
 /**
- * Purge pending_list of entries older than BOT_MAX_MINUTES minutes
+ * Purge pending_list of entries older than the defined minutes limit
  */
 static void
 expire_pending_list(
     )
 {
-    const glong max_sec = 60 * BOT_MAX_MINUTES;
+    const glong max_min = purple_prefs_get_int("/plugins/core/" PLUGIN_ID "/botmaxminutes");
+    const glong max_sec = 60 * max_min;
     GTimeVal *now = NULL;
     GSList *search = NULL;
     now = g_new0(GTimeVal, 1);
@@ -371,6 +370,7 @@ receiving_im_msg_cb(
 
     const char *question = purple_prefs_get_string("/plugins/core/" PLUGIN_ID "/question");
     const char *answer = purple_prefs_get_string("/plugins/core/" PLUGIN_ID "/answer");
+    const char *successmsg = purple_prefs_get_string("/plugins/core/" PLUGIN_ID "/successmsg");
 
     PendingMessage *newpend = NULL;
 
@@ -463,7 +463,7 @@ receiving_im_msg_cb(
         newpend->message = g_strdup(*buffer);
         pending_list = g_slist_prepend(pending_list, newpend);
 
-        botmsg = g_strdup_printf(_("Bot Sentry engaged:  you are now being ignored!  Your message will be delivered if you can correctly answer the following question within %i minutes:  %s"), BOT_MAX_MINUTES, question);
+        botmsg = g_strdup_printf("%s", question);
 
         send_auto_reply(account, *sender, botmsg);
 
@@ -478,8 +478,7 @@ receiving_im_msg_cb(
                  */
             retval = TRUE;
         } else {
-            botmsg = (char *)
-                _("Bot Sentry accepted your answer and delivered your original message.  You may now speak freely.");
+            botmsg = g_strdup_printf("%s", successmsg);
             send_auto_reply(account, *sender, botmsg);
 
             if (purple_prefs_get_bool("/plugins/core/" PLUGIN_ID "/auto_add_permit")) {
@@ -538,6 +537,13 @@ get_plugin_pref_frame(
     ppref = purple_plugin_pref_new_with_name_and_label("/plugins/core/" PLUGIN_ID "/answer", _("Answer"));
     purple_plugin_pref_frame_add(frame, ppref);
 
+    ppref = purple_plugin_pref_new_with_name_and_label("/plugins/core/" PLUGIN_ID "/successmsg", _("Success message"));
+    purple_plugin_pref_frame_add(frame, ppref);
+
+    ppref = purple_plugin_pref_new_with_name_and_label("/plugins/core/" PLUGIN_ID "/botmaxminutes", _("Time limit for answering (in minutes)"));
+    purple_plugin_pref_set_bounds(ppref, 1, 9999);
+    purple_plugin_pref_frame_add(frame, ppref);
+
     ppref = purple_plugin_pref_new_with_label(_("When the challenge is met, let this person IM me and:"));
     purple_plugin_pref_frame_add(frame, ppref);
 
@@ -592,6 +598,10 @@ plugin_load(
     /* all new prefs must be created first */
     purple_prefs_rename("/plugins/core/gaim_bs", "/plugins/core/" PLUGIN_ID);
     purple_prefs_rename("/plugins/core/pidgin_bs", "/plugins/core/" PLUGIN_ID);
+
+    purple_prefs_add_string("/plugins/core/" PLUGIN_ID "/successmsg", _("Thanks for your confirmation! You may now speak normally with me."));
+
+    purple_prefs_add_int("/plugins/core/" PLUGIN_ID "/botmaxminutes", 10);
 
     /* enable bot sentry account by account */
     for (iter = purple_plugins_get_protocols(); iter; iter = iter->next) {
@@ -689,7 +699,7 @@ static PurplePluginInfo info = {
     NULL,                                                 /**  summary        */
     NULL,                                                 /**  description    */
     "David Everly <deckrider@users.sourceforge.net>",     /**< author         */
-    PACKAGE_BUGREPORT,                                    /**< homepage       */
+    "http://github.com/jesobreira/bot-sentry",                                    /**< homepage       */
 
     plugin_load,                                          /**< load           */
     plugin_unload,                                        /**< unload         */
@@ -713,7 +723,7 @@ init_plugin(
     info.name = (char *) _("Bot Sentry");
     info.summary = (char *) _("Block robots from sending Instant Messages");
     info.description = (char *)
-        _("A simple challenge-response system to prevent spam-bots from sending you instant messages.  Think of it as a pop-up blocker.  You define a question and an answer.  Instant messages from others will be ignored unless one of the following is true:\n\n\t* the sender is in your Buddy List\n\t* the sender is in your Allow List\n\t* the sender correctly answers your question\n\nOptionally, you may have the sender automatically added to your Allow List when the correct answer is provided.\n\nEncryption plugin users:  Bot Sentry will send plain text messages to the sender until the sender correctly answers your question.");
+        _("A simple challenge-response system to prevent spam-bots from sending you instant messages.  Think of it as a captcha and a pop-up blocker.  You define a question and an answer.  Instant messages from others will be ignored unless one of the following is true:\n\n\t* the sender is in your Buddy List\n\t* the sender is in your Allow List\n\t* the sender correctly answers your question\n\nOptionally, you may have the sender automatically added to your Allow List when the correct answer is provided.\n\nEncryption plugin users:  Bot Sentry will send plain text messages to the sender until the sender correctly answers your question.");
 
     return;
 }

@@ -4,12 +4,12 @@
 AC_PREREQ([2.61])
 
 m4_define([VERSION_MAJOR], [1])
-m4_define([VERSION_MINOR], [3])
+m4_define([VERSION_MINOR], [6])
 m4_define([VERSION_MICRO], [0])
 
 AC_INIT([bot-sentry],
         [VERSION_MAJOR.VERSION_MINOR.VERSION_MICRO],
-        [http://pidgin-bs.sourceforge.net/])
+        [http://github.com/jesobreira/bot-sentry/])
 
 # intltoolize cannot handle: AC_CONFIG_AUX_DIR([build-aux])
 # see http://bugzilla.gnome.org/show_bug.cgi?id=323968
